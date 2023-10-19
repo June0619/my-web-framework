@@ -16,9 +16,10 @@ public class MemberRepository {
     @Getter
     private static MemberRepository instance = new MemberRepository();
 
-    public void save(Member saveMember) {
+    public Member save(Member saveMember) {
         Member member = new Member(sequence.incrementAndGet(), saveMember);
         store.put(member.getId(), member);
+        return member;
     }
 
     public Member findById(Long id) {

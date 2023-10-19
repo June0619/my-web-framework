@@ -1,9 +1,10 @@
 package me.jwjung.framework.basic.domain.member;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
+@EqualsAndHashCode
 public class Member {
 
     private long id;
@@ -11,6 +12,11 @@ public class Member {
     private int age;
 
     private Member() {};
+
+    public Member(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public Member(long id, Member member) {
         this.id = id;
