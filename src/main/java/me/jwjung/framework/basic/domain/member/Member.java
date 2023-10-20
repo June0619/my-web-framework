@@ -18,10 +18,4 @@ public class Member {
         this.age = age;
     }
 
-    public Member(long id, Member member) {
-        this.id = id;
-        this.name = member.name;
-        this.age = member.age;
-    }
-
 }
