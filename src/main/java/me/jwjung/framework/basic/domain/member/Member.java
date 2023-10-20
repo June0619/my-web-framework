@@ -2,9 +2,11 @@ package me.jwjung.framework.basic.domain.member;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter
 @EqualsAndHashCode
+@ToString
 public class Member {
 
     private long id;
