@@ -1,4 +1,4 @@
-package me.jwjung.framework.basic;
+package me.jwjung.framework.basic.web.servlet;
 
 import lombok.extern.slf4j.Slf4j;
 
