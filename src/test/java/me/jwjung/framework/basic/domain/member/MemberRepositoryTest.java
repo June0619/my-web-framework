@@ -1,6 +1,5 @@
 package me.jwjung.framework.basic.domain.member;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,13 +18,10 @@ class MemberRepositoryTest {
 
     @Test
     void save() {
-
         //given
         Member member = new Member("member", 20);
-
         //when
         memberRepository.save(member);
-
         //then
         Member findMember = memberRepository.findById(member.getId());
         assertThat(findMember).isEqualTo(member);
@@ -36,12 +32,10 @@ class MemberRepositoryTest {
         //given
         Member memberA = new Member("memberA", 10);
         Member memberB = new Member("memberB", 20);
-
         //when
         memberRepository.save(memberA);
         memberRepository.save(memberB);
         List<Member> findMembers = memberRepository.findAll();
-
         //then
         assertThat(findMembers.size()).isEqualTo(2);
         assertThat(findMembers).contains(memberA, memberB);
